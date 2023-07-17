@@ -1,18 +1,25 @@
 {
   "clientes": [
     {
-      "nombre": "Fabian Magdiel",
-      "email": "acc1497@hotmail.com",
-      "telefono": "971359245",
-      "empresa": "empresa",
-      "id": 27
+      "nombre": "Laura Herrera",
+      "email": "liamoongh@gmail.com",
+      "telefono": "3227875264",
+      "empresa": "Empresa de Laura",
+      "id": 1
     },
     {
-      "nombre": "Jose",
-      "email": "jose@jose.com",
-      "telefono": "39871723",
-      "empresa": "rpa",
-      "id": 28
+      "nombre": "Fabian Martinez",
+      "email": "contacto.fabianmartinezcaro@gmail.com",
+      "telefono": "971359245",
+      "empresa": "Empresa de Fabian",
+      "id": 2
+    },
+    {
+      "nombre": "Elliot ",
+      "email": "elliot@elliot.dev",
+      "telefono": "889374341",
+      "empresa": "elliot.dev",
+      "id": 3
     }
   ]
 }

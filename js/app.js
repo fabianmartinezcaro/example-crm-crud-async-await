@@ -47,7 +47,6 @@ import { eliminarCliente, obtenerClientes } from "./API.js";
             if(confirmar){
                 eliminarCliente(clienteID);
             }
-            
         }
     }
 

@@ -28,7 +28,7 @@ import UI from "./UI.js";
             return;
         }
 
-        ui.mostrarAlerta('Cliente agregado correctamente!', 'correcto')
+        ui.mostrarAlerta('Cliente agregado correctamente!', 'correcto');
         agregarCliente(cliente);
         ui.agregarRegistro();
 
@@ -36,7 +36,7 @@ import UI from "./UI.js";
 
 
     function validarDatos(cliente){
-        return !Object.values(cliente).every(input => input !== '')
+        return !Object.values(cliente).every(input => input !== '');
     }
     
 })();

@@ -1,4 +1,3 @@
-
 const url = 'http://localhost:4000/clientes';
 
 // CREACION CLIENTE
@@ -37,6 +36,29 @@ export const eliminarCliente = async clienteID => {
 
         })
     } catch (error) {
+        console.log(error)
+    }
+}
+
+// OBTIENE UN CLIENTE POR SU ID
+export const obtenerCliente = async id => {
+    try {
+        const resultado = await fetch(`${url}/${id}`);
+        const cliente = await resultado.json();
+        return cliente;
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+// EDITA UN CLIENTE
+export const editarCliente = async id => {
+    try {
+        await fetch(`${url}/${id}`, {
+            method: 'PUT'
+        })
         
+    } catch (error) {
+        console.log(error)
     }
 }
