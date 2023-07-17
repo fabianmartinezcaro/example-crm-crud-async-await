@@ -7,7 +7,7 @@ export const agregarCliente = async cliente => {
             method: 'POST',
             body: JSON.stringify(cliente),
             headers: {
-                'Content-type': 'application/json'
+                'Content-Type': 'application/json'
             }
         })
 
@@ -33,7 +33,6 @@ export const eliminarCliente = async clienteID => {
     try {
         await fetch(`${url}/${clienteID}`, {
             method: 'DELETE'
-
         })
     } catch (error) {
         console.log(error)
@@ -52,13 +51,17 @@ export const obtenerCliente = async id => {
 }
 
 // EDITA UN CLIENTE
-export const editarCliente = async id => {
+export const editarCliente = async cliente => {
     try {
-        await fetch(`${url}/${id}`, {
-            method: 'PUT'
+        await fetch(`${url}/${cliente.id}`, {
+            method: 'PUT',
+            body: JSON.stringify(cliente),
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
-        
+        window.location.href = 'index.html';
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }

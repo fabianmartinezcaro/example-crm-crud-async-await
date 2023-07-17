@@ -19,7 +19,7 @@ import UI from "./UI.js";
 
         // SUBMIT AL FORMULARIO EDITADO
         const formulario = document.querySelector('#formulario');
-        formulario.addEventListener('submit', validarCliente)
+        formulario.addEventListener('submit', validarCliente);
     })
 
     function mostrarCliente(cliente){
@@ -42,7 +42,7 @@ import UI from "./UI.js";
             email: emailInput.value,
             telefono: telefonoInput.value,
             empresa: empresaInput.value,
-            id: idInput.value
+            id: parseInt(idInput.value)
         }
 
         if(validarDatos(cliente)){
