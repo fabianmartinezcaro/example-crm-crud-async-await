@@ -1,23 +1,26 @@
-export class UI{
+export default class UI{
+
+    agregarRegistro(){
+        
+    }
 
     mostrarAlerta(mensaje, tipo){
 
-        const alerta = document.querySelector('.bg-red-100');
-        let condicionCumplida = false;
+        const formulario = document.querySelector('#formulario');
+        const alerta = document.createElement('DIV');
+        alerta.textContent = mensaje;
 
-        if(!alerta){
-            alerta.textContent = mensaje;
-
-            alerta.classList.add('bg-red-100', 'border-red-400', 'text-center', 'text-red-700', 'px-4', 'py-3', 'rounded', 'max-w-lg', 'mx-auto');
-
-            alerta.innerHTML = `
-                <strong class="font-bold">error</strong>
-                <span class="block sm:inline">${mensaje}</span>
-            `
-            
+        if(tipo === 'error'){
+            alerta.classList.add('bg-red-100', 'border', 'border-red-500', 'my-4', 'py-4', 'px-2', 'text-center');
+        }else if(tipo === 'correcto'){
+            alerta.classList.add('bg-green-100', 'border', 'border-green-500', 'my-4', 'py-4', 'px-2', 'text-center');
         }
 
+        formulario.appendChild(alerta); 
 
+        setTimeout(() => {
+            alerta.remove();
+        }, 2000);
 
     }
 

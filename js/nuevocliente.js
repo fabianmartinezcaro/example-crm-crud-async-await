@@ -1,4 +1,10 @@
+import { agregarCliente } from "./API.js";
+import UI from "./UI.js";
+
 (function(){
+
+    const ui = new UI();
+
     const formulario = document.querySelector('#formulario');
     formulario.addEventListener('submit', validarFormulario);
 
@@ -18,13 +24,16 @@
         }
 
         if(validarDatos(cliente)){
-            console.log('Los datos son obligatorios');
+            ui.mostrarAlerta('Todos los datos son obligatorios', 'error');
             return;
         }
 
-        console.log('Cliente agregado exitosamente!');
+        ui.mostrarAlerta('Cliente agregado correctamente!', 'correcto')
+        agregarCliente(cliente);
+        ui.agregarRegistro();
 
     }
+
 
     function validarDatos(cliente){
         return !Object.values(cliente).every(input => input !== '')

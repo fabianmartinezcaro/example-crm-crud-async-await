@@ -1,11 +1,18 @@
 {
   "clientes": [
     {
-      "nombre": "Fabian",
-      "email": "fabian@gmail.com",
-      "telefono": "876569936",
-      "empresa": "SRP",
-      "id": 3001
+      "nombre": "Fabian Magdiel",
+      "email": "acc1497@hotmail.com",
+      "telefono": "971359245",
+      "empresa": "empresa",
+      "id": 27
+    },
+    {
+      "nombre": "Jose",
+      "email": "jose@jose.com",
+      "telefono": "39871723",
+      "empresa": "rpa",
+      "id": 28
     }
   ]
 }
